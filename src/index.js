@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 //import Pokemon from './API/Pokemon';
 import App from './component/App';
 //import App2 from './App2';
-import "./component/UseStateArray.css";
+//import "./component/UseStateArray.css";
 //import "./component/Browser router/Searchfilter.css";
 
 //import  './component/todolist/Note.css';
