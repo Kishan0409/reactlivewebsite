@@ -6,7 +6,8 @@ const Login = () => {
         username:"",
         email:"",
         phone:"",
-        password:""
+        password:"",
+        lastname:""
 
     });
     const[records,setRecords]=useState([]);
@@ -22,7 +23,7 @@ const Login = () => {
         e.preventDefault()
         const newRecord = {...userregistration};
         setRecords([...records,newRecord]);
-        setUserRegistration({username:"",email:"",phone:"",password:""})
+        setUserRegistration({username:"",email:"",phone:"",password:"",lastname:""})
 
         
     }
@@ -36,6 +37,13 @@ const Login = () => {
                     value={userregistration.username}  onChange={handleInput}
                     autoComplete="off"
                     name="username" id="username" />
+                </div>
+                <div>
+                    <label htmlFor="username">LastName</label>
+                    <input type="text" 
+                    value={userregistration.lastname}  onChange={handleInput}
+                    autoComplete="off"
+                    name="lastname" id="lastname" />
                 </div>
                 <div>
                     <label htmlFor="email">Email</label>
@@ -63,12 +71,14 @@ const Login = () => {
             <div>
                 {
                     records.map((curElem) => {
+                        const{username,lastname,email,phone,password} = curElem;
                         return (
                             <div className="showDataStyle" key={curElem.id}>
-                               <p>{curElem.username}</p>
-                               <p>{curElem.email}</p>
-                               <p>{curElem.phone}</p>
-                               <p>{curElem.password}</p>
+                               <p>{username}</p>
+                               <p>{email}</p>
+                               <p>{phone}</p>
+                               <p>{password}</p>
+                               <p>{lastname}</p>
 
                             </div>
 
